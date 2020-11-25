@@ -11,11 +11,14 @@
     	http://www.springframework.org/schema/mvc
         http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
-    <context:component-scan base-package="java"/>
+    <context:component-scan base-package="controlller"/>
 
     <mvc:annotation-driven/>
-
+<!--Последующие 3 бина -для того, чтобы работал шаблониизатор ThymeLeaf-->
     <bean id="templateResolver" class="org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver">
+<!--       /WEB-INF/views/ - где лежат наши шаблоны -->
+<!--        .html -расширение у наших файлов Представления-->
+        <!--Это для того, чтобы в контроллере не указывать каждый раз путь и расширение-->
         <property name="prefix" value="/WEB-INF/views/"/>
         <property name="suffix" value=".html"/>
     </bean>

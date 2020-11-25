@@ -15,11 +15,13 @@
             <param-name>contextConfigLocation</param-name>
             <param-value>/WEB-INF/applicationContextMVC.xml</param-value>
         </init-param>
+<!--        Запуск в первую очередь-->
         <load-on-startup>1</load-on-startup>
     </servlet>
 
     <servlet-mapping>
         <servlet-name>dispatcher</servlet-name>
+<!--        Любой URL бужет направлен на диспатчерСервлет-->
         <url-pattern>/</url-pattern>
     </servlet-mapping>
 

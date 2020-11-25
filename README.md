@@ -1,4 +1,12 @@
-# SpringWebMVCApp1_xml
-web.xml Contr+View NO Model Tomcat
+#NeilAlishev Spring lessons 15
 
-NeilAlishev Spring lessons 15
+SpringWebMVCApp1_xml
+XML Конфигурация:
+web.xml
+applicationContextMVC.xml 
+
+Contr+View 
+NO Model 
+Tomcat
+
+
