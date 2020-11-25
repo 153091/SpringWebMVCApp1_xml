@@ -2,6 +2,10 @@
 
 SpringWebMVCApp1_xml
 
+Прорабатываем @Controller и @GetMapping
+Методы контроллера возвращают "представление"
+
+
 Java Конфигурация:
 
 MySpringMvcDispatcherServletInitializer extends AbstractAnnotationConfigDispatcherServletInitializer
