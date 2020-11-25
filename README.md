@@ -2,10 +2,13 @@
 
 SpringWebMVCApp1_xml
 
-XML Конфигурация:
+Java Конфигурация:
 
-web.xml -считывается сервером Apache Tomcat, конфигурирует DispatcherServet
-applicationContextMVC.xml - конфигурация Spring приложения(бины, component scan, настройка ThymeLeaf
+MySpringMvcDispatcherServletInitializer extends AbstractAnnotationConfigDispatcherServletInitializer
+( взамен web.xml) -считывается сервером Apache Tomcat, конфигурирует DispatcherServet
+
+SpringConfig implements WebMvcConfigurer
+(взамен applicationContextMVC.xml) - конфигурация Spring приложения(бины, component scan, настройка ThymeLeaf
 
 Contr+View 
 NO Model 
