@@ -10,7 +10,7 @@ List of all People:
 <!--Перебор элементов из Коллекции при помощи ТаймЛиф-->
 <div th:each="person : ${people}">
 <!--    Сделаем еще и переход на его страничку-->
-    <a th:href="${/people/{id}(id=${person.getId()})}"  th:text="${person.getName()}">user</a>
+    <a th:href="@{/people/{id}(id=${person.getId()})}"  th:text="${person.getName()}">user</a>
 </div>
 </body>
 </html>
