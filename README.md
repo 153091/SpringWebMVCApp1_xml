@@ -1,7 +1,7 @@
 #NeilAlishev Spring lessons 21
 
 20.
-READ
+only READ  (from CRUD)
 Вместо БД временно ArrayList.
 
 
