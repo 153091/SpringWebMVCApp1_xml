@@ -1,7 +1,5 @@
 #NeilAlishev Spring lessons 16
 
-SpringWebMVCApp1_xml
-
 Java Конфигурация:
 
 MySpringMvcDispatcherServletInitializer extends AbstractAnnotationConfigDispatcherServletInitializer
