@@ -8,8 +8,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import springcourse.dao.PersonDAO;
 
-import java.util.List;
-
 @Controller
 @RequestMapping("/people")
 public class PeopleController {
