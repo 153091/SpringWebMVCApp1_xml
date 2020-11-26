@@ -1,8 +1,7 @@
-#NeilAlishev Spring lessons 17
-
-SpringWebMVCApp1_xml
+#NeilAlishev Spring lessons 17,19
 
 Прорабатываем @Controller и @GetMapping
+@RequestParam - получаем параметры GET-запроса
 Методы контроллера возвращают "представление"
 
 
