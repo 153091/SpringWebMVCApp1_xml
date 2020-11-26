@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create New Person</title>
+</head>
+<body>
+<!--сделаем POST на /people отправив обьект хранящийся по ключу "person"
+            вначале заполнив его поля-->
+<form th:method="POST" th:action="@{/people}" th:object="${person}">
+<!--    Подсказка рядом с окошком ввода-->
+    <label for="name">Enter Name</label>
+<!--    Назначение поля Name  в классе Person-->
+    <input type="text" th:field="*{name}" id="name"/>
+<!--    пустая строка-->
+    <br/>
+<!--    КНОПКА ОТПРАВКИ  данныйх POST-запросом-->
+    <input type="submit" value="Create!">
+</form>
+
+</body>
+</html>

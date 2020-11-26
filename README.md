@@ -1,9 +1,15 @@
 #NeilAlishev Spring lessons 21
 
-20.
+21.
 only READ  (from CRUD)
 Вместо БД временно ArrayList.
-
+GET /people
+GET /people/id
+22.
+@ModelAttribute
+CREATE
+GET /people/new
+POST /people
 
 
 Java Конфигурация:
