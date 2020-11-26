@@ -33,13 +33,22 @@ public class PeopleController {
         return "people/showOne";
     }
 
+    /**  1 ВАРИАНТ метода */
     // в браузере вернется HTML форма для создания нового человека
     @GetMapping("/new")
     public String newPerson(Model model) {
         model.addAttribute("person", new Person());
-
         return "people/new";
     }
+
+    /**  2 ВАРИАНТ метода
+     * То же самое , но  КОРОЧЕ!*/
+//    @GetMapping("/new")
+//    public String newPerson(@ModelAttribute("person") Person person) {
+//        return "people/new";
+//    }
+
+
 
     // @ModelAttribute("person") Person person - для ключа "person" создает new Person и
     // заполняет его поля параметрами из HTML формы people/new
