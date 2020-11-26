@@ -1,7 +1,8 @@
-#NeilAlishev Spring lessons 17,19
+#NeilAlishev Spring lessons 17,19,20
 
 Прорабатываем @Controller и @GetMapping
-@RequestParam - получаем параметры GET-запроса
+@RequestParam - получаем параметры GET-запроса FirstController.
+Model model - передаем параметры из этого GET-запроса на наше представление hello.html 
 Методы контроллера возвращают "представление"
 
 
