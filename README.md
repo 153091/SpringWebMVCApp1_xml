@@ -1,9 +1,9 @@
-#NeilAlishev Spring lessons 17,19,20
+#NeilAlishev Spring lessons 21
 
-Прорабатываем @Controller и @GetMapping
-@RequestParam - получаем параметры GET-запроса FirstController.
-Model model - передаем параметры из этого GET-запроса на наше представление hello.html 
-Методы контроллера возвращают "представление"
+20.
+READ
+Вместо БД временно ArrayList.
+
 
 
 Java Конфигурация:
