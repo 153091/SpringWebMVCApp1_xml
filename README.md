@@ -1,4 +1,4 @@
-#NeilAlishev Spring lessons 21
+#NeilAlishev Spring lessons 21,22,23
 
 21.
 only READ  (from CRUD)
@@ -10,6 +10,11 @@ GET /people/id
 CREATE
 GET /people/new
 POST /people
+23.
+PATCH  DELETE
+GET /people/:id/edit
+PATCH people/:id
+DELETE people/:id
 
 
 Java Конфигурация:
