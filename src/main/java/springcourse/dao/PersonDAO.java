@@ -36,4 +36,17 @@ public class PersonDAO {
         person.setId(++PEOPLE_COUNT);
         people.add(person);
     }
+
+    public void update(int id, Person updatedPerson) {
+        Person personToBeUpdate = getPerson(id);
+
+        personToBeUpdate.setName(updatedPerson.getName());
+    }
+
+    // реализовано в виде формы в showOne.html
+    public void delete(int id) {
+        // проходимся по всем элементам списка
+        // если Id у Person == id, то удаляем
+        people.removeIf(p -> p.getId() == id);
+    }
 }

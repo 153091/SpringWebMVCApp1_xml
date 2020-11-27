@@ -12,6 +12,8 @@ GET /people/new
 POST /people
 23.
 PATCH  DELETE
+HTML не умеет читать PATCH DELETE запросы, и чтобы мог - мы их обрабатываем в файле "Замена web.xml",
+добавив туда еще два специальных метода
 GET /people/:id/edit
 PATCH people/:id
 DELETE people/:id

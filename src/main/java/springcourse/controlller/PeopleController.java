@@ -51,12 +51,33 @@ public class PeopleController {
 
 
     // @ModelAttribute("person") Person person - для ключа "person" создает new Person и
-    // заполняет его поля параметрами из HTML формы people/new
+    // заполняет его поля параметрами из HTML формы people/new   (или null)
     @PostMapping()
     public String create(@ModelAttribute("person") Person person) {
         personDAO.save(person);
         // После того, как человек будет добавлен, браузер совершит
         // переход (redirect) на нужную нам страницу /people
+        return "redirect:/people";
+    }
+
+    // страница для редактирования человека
+    @GetMapping("/{id}/edit")
+    public String edit(@PathVariable("id") int id, Model model) {
+        model.addAttribute("person", personDAO.getPerson(id));
+        return "people/edit";
+    }
+
+    // метод который принимает PATCH запрос на адрес people/id
+    @PatchMapping("/{id}")
+    public String update(@ModelAttribute("person") Person person, @PathVariable("id") int id) {
+        personDAO.update(id, person);
+        return "redirect:/people";
+    }
+
+    // реализовано в виде формы в showOne.html
+    @DeleteMapping("/{id}")
+    public String delete(@PathVariable("id") int id) {
+        personDAO.delete(id);
         return "redirect:/people";
     }
 }
