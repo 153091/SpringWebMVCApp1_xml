@@ -1,4 +1,8 @@
-#NeilAlishev Spring lessons 21,22,23
+#NeilAlishev Spring lessons 24
+
+24.
+@Valid Валидация форм
+
 
 21.
 only READ  (from CRUD)

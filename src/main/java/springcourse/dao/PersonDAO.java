@@ -15,10 +15,10 @@ public class PersonDAO {
     {
         people = new ArrayList<>();
 
-        people.add(new Person(++PEOPLE_COUNT, "Alex"));
-        people.add(new Person(++PEOPLE_COUNT, "Tom"));
-        people.add(new Person(++PEOPLE_COUNT, "Joe"));
-        people.add(new Person(++PEOPLE_COUNT, "Mike"));
+        people.add(new Person(++PEOPLE_COUNT, "Alex", 24, "1@wer.ru"));
+        people.add(new Person(++PEOPLE_COUNT, "Tom", 29, "2@wer.ru"));
+        people.add(new Person(++PEOPLE_COUNT, "Joe", 25, "3@wer.ru"));
+        people.add(new Person(++PEOPLE_COUNT, "Mike", 23, "4@wer.ru"));
     }
 
     public List<Person> getAllPeople() {
@@ -41,6 +41,8 @@ public class PersonDAO {
         Person personToBeUpdate = getPerson(id);
 
         personToBeUpdate.setName(updatedPerson.getName());
+        personToBeUpdate.setAge(updatedPerson.getAge());
+        personToBeUpdate.setEmail(updatedPerson.getEmail());
     }
 
     // реализовано в виде формы в showOne.html
