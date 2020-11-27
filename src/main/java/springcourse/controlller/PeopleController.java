@@ -3,9 +3,12 @@ package springcourse.controlller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import springcourse.dao.PersonDAO;
 import springcourse.models.Person;
+
+import javax.validation.Valid;
 
 @Controller
 @RequestMapping("/people")
@@ -50,10 +53,19 @@ public class PeopleController {
 
 
 
-    // @ModelAttribute("person") Person person - для ключа "person" создает new Person и
+    // (1) @ModelAttribute("person") Person person - для ключа "person" создает new Person и
     // заполняет его поля параметрами из HTML формы people/new   (или null)
+    // (2) @Valid -поставлена перед моделью Person -проверяет валидность его полей, которые мы
+    // ограничили в классе Person. Все ошибки будут сохранены в отдельный обьект BindingResult -
+    // - он обязательно должен идти СРАЗУ после валидируемой модели
     @PostMapping()
-    public String create(@ModelAttribute("person") Person person) {
+    public String create(@ModelAttribute("person") @Valid Person person,
+                         BindingResult bindingResult) {
+        if (bindingResult.hasErrors()) {
+            // если есть ошибки мы просто сразу же возвращаем изначальную форму для заполнения
+            return "people/new";
+        }
+
         personDAO.save(person);
         // После того, как человек будет добавлен, браузер совершит
         // переход (redirect) на нужную нам страницу /people
@@ -69,7 +81,12 @@ public class PeopleController {
 
     // метод который принимает PATCH запрос на адрес people/id
     @PatchMapping("/{id}")
-    public String update(@ModelAttribute("person") Person person, @PathVariable("id") int id) {
+    public String update(@ModelAttribute("person") @Valid Person person, BindingResult bindingResult,
+                         @PathVariable("id") int id) {
+        if (bindingResult.hasErrors()) {
+            // если есть ошибки мы просто сразу же возвращаем изначальную форму для заполнения
+            return "people/edit";
+        }
         personDAO.update(id, person);
         return "redirect:/people";
     }

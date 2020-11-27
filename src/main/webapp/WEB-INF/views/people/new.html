@@ -12,12 +12,16 @@
     <label for="name">Enter Name</label>
 <!--    Назначение поля Name  в классе Person-->
     <input type="text" th:field="*{name}" id="name"/>
+<!--    Вывод ошибок валидации.  #fields - доступ ко всем полям объекта-->
+    <div style="color:red" th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name Error</div>
     <br/>
     <label for="age">Enter Age</label>
     <input type="text" th:field="*{age}" id="age"/>
+    <div style="color:red" th:if="${#fields.hasErrors('age')}" th:errors="*{age}">Error for Age</div>
     <br/>
     <label for="email">Enter e-mail</label>
     <input type="text" th:field="*{email}" id="email"/>
+    <div style="color:red" th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Email Error/Random text</div>
 <!--    пустая строка-->
     <br/>
 <!--    КНОПКА ОТПРАВКИ  данныйх POST-запросом-->

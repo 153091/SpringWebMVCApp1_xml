@@ -1,7 +1,8 @@
 #NeilAlishev Spring lessons 24
 
 24.
-@Valid Валидация форм
+@Valid Валидация форм + объект BindingResult
+Hibernate Validator (+1 зависимость в pom.xml)
 Пропускать только приемлемые имена и цифры
 
 
