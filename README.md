@@ -1,4 +1,11 @@
-#NeilAlishev Spring lessons 24
+#NeilAlishev Spring lessons 25
+
+25.
+Заменяем ArrayList на JDBC API.
+DAO getAllPeople() -показать всех персон
+save() -создание персоны
+
+в pom.xml добавлена зависимость h2 database 
 
 24.
 @Valid Валидация форм + объект BindingResult
