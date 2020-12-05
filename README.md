@@ -2,6 +2,7 @@
 
 25.
 Заменяем ArrayList на JDBC API.
+BAD example of JDBC API
 DAO getAllPeople() -показать всех персон
 save() -создание персоны
 
