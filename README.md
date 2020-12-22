@@ -1,5 +1,10 @@
 #NeilAlishev Spring lessons 25
 
+26.
+SQL иньекции
+PreparedStatement
+Перереализация методов в ДАО
+
 25.
 Заменяем ArrayList на JDBC API.
 BAD example of JDBC API
